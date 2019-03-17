@@ -1,6 +1,6 @@
 import time
 import pandas as pd
-import numpy as np
+
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
@@ -21,7 +21,9 @@ def get_filters():
     while True:
         city_name = input(print("\nEnter which city (Chicago, New York, Washington), you want to see: \n" ))
         city = city_name.lower()
-        if (city in ['chicago','new york','washington']):
+        #if (city in ['chicago','new york','washington']):
+        if city in CITY_DATA.keys():
+
             #print("Thanks for selecting: {} city\n".format(city))
             break
         else:
